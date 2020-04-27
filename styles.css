@@ -19,14 +19,14 @@
     position: absolute;
     animation-name: floating;
     animation-duration: 3s;
-    animation-iteration-count: infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
     animation-timing-function: ease-in-out;
+    visibility: hidden;
 }
 @keyframes floating {
-    100% {top : 0%;} 
+    100% {top : 0%; visibility: visible}
 }
 body{
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    overflow: hidden;
 }
