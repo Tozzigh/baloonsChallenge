@@ -5,4 +5,4 @@ setInterval(function spawnBall() {
         this.div.style.top = parseInt( 100 * Math.random() ) + "%" ;
         this.div.style.left = parseInt( 100 * Math.random() ) + "%" ;
         this.div.style.backgroundColor = "hsla("+parseInt( 360 * Math.random() )+", "+parseInt( 100 * Math.random() )+"%, "+parseInt( 100 * Math.random() )+"%, "+Math.random()+")";
-    }, 50);
+    }, 1);

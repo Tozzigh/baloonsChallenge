@@ -4,9 +4,21 @@
     right: 5%;
 }
 .ball{
-    width: 50px;
-    height: 50px;
+    width: 4px;
+    height: 4px;
     position: absolute;
     bottom: 0px;
     left: 10px;
+}
+.ball{
+    background-color: white !important;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    70%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }
