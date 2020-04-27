@@ -3,6 +3,9 @@
     top: 90%;
     right: 5%;
 }
+body{
+    overflow: hidden;
+}
 .ball{
     width: 4px;
     height: 4px;
@@ -11,7 +14,6 @@
     left: 10px;
 }
 .ball{
-    background-color: white !important;
     animation-name: floating;
     animation-duration: 3s;
     animation-iteration-count: infinite;
