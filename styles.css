@@ -21,12 +21,13 @@
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-fill-mode: backwards;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     visibility: hidden;
 }
 @keyframes floating {
     100% {top : 0%; visibility: visible}
 }
+
 body{
     overflow: hidden;
 }
