@@ -5,22 +5,15 @@ var vite = 3;
 setInterval(function checkLife(){
         if(vite == 3){
             this.div.addEventListener("animationend", function(){document.getElementById("life1").className = "d-none";vite=2; })
-            console.log(vite)
-
-    }}, 50);
-    setInterval(function checkLife2(){
+        }
         if(vite == 2){
             this.div.addEventListener("animationend", function(){document.getElementById("life2").className = "d-none";vite=1; })
-                        console.log(vite)
-
-    }}, 50);
-
-    setInterval(function checkLife3(){
+        }
         if(vite == 1){
-            this.div.addEventListener("animationend", function(){document.getElementById("life3").className = "d-none";vite=0; })
-                        console.log(vite)
+            this.div.addEventListener("animationend", function(){document.getElementById("life3").className = "d-none";location.reload(); })
+        };
+}, 900);
 
-    }}, 50);
 setInterval(function spawnBall() {
 	    this.div = document.createElement("div") ;
         document.body.appendChild( this.div ) ;
@@ -34,8 +27,4 @@ setInterval(function spawnBall() {
             document.getElementById("score").innerHTML=count;
             count++;
         };
-
-
-    }, 900);
-
-    
+}, 900);

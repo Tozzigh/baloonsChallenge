@@ -11,14 +11,22 @@
 </head>
 
 <body onload="spawnBall()" class="bg-dark">
-	
-        <div class="linea bg-danger" ></div>        
+    
+        <div class="linea bg-danger" ></div>   
+        <div class="row justify-content-between m-2">
+            <div class="col-6 ">
+                <h1 id="safeZone" class="d-inline text-white">Safe for 1 sec after losing a life!</h1>
+            </div>    
+            <div class="col-3 text-right m-5">
+                <h1 id="score" class="d-inline text-white">0</h1> 
+            </div>
+        </div>
+       
         <div id="life3"></div>
         <div id="life2"></div>
         <div id="life1"></div>
+        
 
-
-    <h1 id="score" class="text-white m-5">0</h1>
     <div class="icons8">
         <a>Icons by <a target="_blank" href="https://icons8.com">Icons8</a>
     </div>

@@ -27,7 +27,6 @@
 @keyframes floating {
     100% {top : 0px; visibility: visible;}
 }
-
 body{
     overflow: hidden;
 }
