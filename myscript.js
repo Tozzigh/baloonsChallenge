@@ -2,6 +2,25 @@ var array = ["","green", "gray","red","white","blue","yellow"];
 var count = 1;
 var vite = 3;
 
+setInterval(function checkLife(){
+        if(vite == 3){
+            this.div.addEventListener("animationend", function(){document.getElementById("life1").className = "d-none";vite=2; })
+            console.log(vite)
+
+    }}, 50);
+    setInterval(function checkLife2(){
+        if(vite == 2){
+            this.div.addEventListener("animationend", function(){document.getElementById("life2").className = "d-none";vite=1; })
+                        console.log(vite)
+
+    }}, 50);
+
+    setInterval(function checkLife3(){
+        if(vite == 1){
+            this.div.addEventListener("animationend", function(){document.getElementById("life3").className = "d-none";vite=0; })
+                        console.log(vite)
+
+    }}, 50);
 setInterval(function spawnBall() {
 	    this.div = document.createElement("div") ;
         document.body.appendChild( this.div ) ;
@@ -16,16 +35,7 @@ setInterval(function spawnBall() {
             count++;
         };
 
-        if(vite == 3){
-            this.div.addEventListener("webkitAnimationEnd", function(){document.getElementById("life1").className = "d-none";vite--; })
-            
-            }else if(vite==2){
-                this.div.addEventListener("webkitAnimationEnd", function(){document.getElementById("life2").className = "d-none";vite--;})
-                 
-                }else if(vite==1){
-                    this.div.addEventListener("webkitAnimationEnd", function(){document.getElementById("life3").className = "d-none";})
-                    }
-                    
-        console.log(vite)
 
     }, 900);
+
+    
