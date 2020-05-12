@@ -1,5 +1,5 @@
 var array = ["","green", "gray","red","white","blue","yellow"];
-var count = 1;
+var score = 1;
 var vite = 3;
 
 window.onload = () => {
@@ -15,25 +15,28 @@ window.onload = () => {
             div.style.top = "100%";
             div.style.left = ( 90 * Math.random() ) + "%" ;
             div.style.backgroundColor = array[Math.floor((Math.random() * 6) + 1)];    
-
+            
             div.addEventListener("click", function(ball){
                 ball.target.parentElement.removeChild(ball.target);
-                document.getElementById("score").innerHTML=count;
-                count++;
+                document.getElementById("score").innerHTML=score;
+                score++;
+                if(score>21)
+                {spawnBall()}
+                if(score>41)
+                {spawnBall()}
+                if(score>61)
+                {spawnBall()}
             });
 
             div.addEventListener("animationend", function(ball){
                 ball.target.parentElement.removeChild(ball.target);
                 vite--; 
                 document.querySelector("li").remove(); 
-                console.log(vite)           
                 if(vite<1){
                     clearInterval(spawn);
-                    document.body.innerHTML = "<div class='gg'><h1>Game Over</h1><h2>"+count+"</h2><button onClick='window.location.reload()'>Retry</button></div>";
+                    document.body.innerHTML = "<div class='gg'><h1>Game Over</h1><h2>"+score+"</h2><button onClick='window.location.reload()'>Retry</button></div>";
                 }
-            });
-        }
-    }, 900);
-    
-           
+            });            
+        }        
+    }, 900);    
 }
