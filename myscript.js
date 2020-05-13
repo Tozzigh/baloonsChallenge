@@ -20,12 +20,8 @@ window.onload = () => {
                 ball.target.parentElement.removeChild(ball.target);
                 document.getElementById("score").innerHTML=score;
                 score++;
-                if(score>21)
-                {spawnBall()}
-                if(score>41)
-                {spawnBall()}
-                if(score>61)
-                {spawnBall()}
+                if(score > 20){return spawnBall()}
+                else if(count > 30){return spawnBall(),spawnBall()}
             });
 
             div.addEventListener("animationend", function(ball){
