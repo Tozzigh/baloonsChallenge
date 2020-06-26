@@ -27,6 +27,7 @@ li{
     animation-fill-mode: backwards;
     animation-timing-function: linear;
     visibility: hidden;
+    z-index: 1000;
 }
 @keyframes floating {
     100% {top : 0px; visibility: visible;}

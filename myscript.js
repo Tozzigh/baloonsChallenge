@@ -20,8 +20,8 @@ window.onload = () => {
                 ball.target.parentElement.removeChild(ball.target);
                 document.getElementById("score").innerHTML=score;
                 score++;
-                if(score > 20){return spawnBall()}
-                else if(count > 30){return spawnBall(),spawnBall()}
+                if(score > 20){spawnBall()}
+                else if(count > 30){ spawnBall(),spawnBall()}
             });
 
             div.addEventListener("animationend", function(ball){
@@ -34,5 +34,5 @@ window.onload = () => {
                 }
             });            
         }        
-    }, 900);    
+    }, 900);   
 }
